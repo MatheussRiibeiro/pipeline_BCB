@@ -1,0 +1,20 @@
+# 1. Credenciais e Ambientes
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+ENV/
+
+# 2. Dados Locais e Temporários 
+data/*
+!data/.gitkeep
+
+# 3. Caches e Compilações do Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# 5. Notebooks 
