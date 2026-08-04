@@ -6,7 +6,7 @@ import boto3
 from dotenv import load_dotenv
 import requests
 
-# Carrega as variáveis do .env na raiz do projeto
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 load_dotenv(BASE_DIR / ".env")
 
@@ -56,8 +56,6 @@ def _get_date_params(anos: int = 1) -> dict:
   )
   return {"dataInicial": data_inicial, "dataFinal": data_final}
 
-
-# --- FUNÇÕES DE EXTRAÇÃO ---
 
 
 def extract_selic(anos: int = 1) -> None:
