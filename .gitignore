@@ -18,3 +18,18 @@ __pycache__/
 .pytest_cache/
 
 # 5. Notebooks 
+Credenciais
+credentials/
+logs/
+data/
+requirements.txt
+*.json
+
+logs/
+*.log
+
+*.parquet
+*.csv
+
+target/
+logs/
