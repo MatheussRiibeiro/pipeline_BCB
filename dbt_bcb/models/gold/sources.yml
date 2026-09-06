@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: silver
+    database: pipeline-etl-r2
+    schema: silver
+    tables:
+      - name: stg_selic
+      - name: stg_dolar
+      - name: stg_ipca
+      - name: stg_ibcbr
