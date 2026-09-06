@@ -1,28 +1,66 @@
-# 1. Credenciais e Ambientes
+# ==============================================
+# SEGURANÇA E CREDENCIAIS (CRÍTICO - NÃO SUBIR)
+# ==============================================
 .env
 .env.*
 !.env.example
+credentials/
+*.json
+!credentials/.gitkeep
 .venv/
 venv/
 ENV/
 
-# 2. Dados Locais e Temporários 
+# ==============================================
+# DADOS LOCAIS (Storage Bronze / Silver local)
+# ==============================================
+data/
 data/*
 !data/.gitkeep
+*.parquet
+*.csv
 
-# 3. Caches e Compilações do Python
+# ==============================================
+# AMBIENTE PYTHON E CACHES
+# ==============================================
 __pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+.pytest_cache/
+.ipynb_checkpoints/
 *.pyc
 *.pyo
 *.pyd
-.pytest_cache/
+# ==============================================
+# ARTEFATOS DBT
+# ==============================================
+dbt_bcb/target/
+dbt_bcb/dbt_packages/
+dbt_bcb/logs/
 
-# 5. Notebooks 
+# ==============================================
+# AIRFLOW & DOCKER LOGS
+# ==============================================
+logs/
+airflow.cfg
+airflow.db
+*.pid
+
+# ==============================================
+# SISTEMA OPERACIONAL & EDITORES
+# ==============================================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
 Credenciais
 credentials/
 logs/
 data/
-requirements.txt
 *.json
 
 logs/
@@ -30,6 +68,3 @@ logs/
 
 *.parquet
 *.csv
-
-target/
-logs/
