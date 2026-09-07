@@ -1,7 +1,7 @@
 import json
 import sys
 from pathlib import Path
-
+import os
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 if str(BASE_DIR) not in sys.path:
@@ -39,13 +39,13 @@ def rodar_teste_local():
   extract.extract_selic(anos=1)
 
   print("Testando Dólar...")
-  extract.extract_dolar()
+  extract.extract_dolar(anos=1)
 
   print("Testando IPCA...")
-  extract.extract_ipca()
+  extract.extract_ipca(anos=5)
 
   print("Testando IBC-Br...")
-  extract.extract_ibcbr()
+  extract.extract_ibcbr(anos=5)
 
   print("\nTodos os testes foram concluídos!")
   print("Confira os arquivos gerados dentro da pasta 'data/bronze/'.")

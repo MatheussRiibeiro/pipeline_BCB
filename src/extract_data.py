@@ -117,12 +117,12 @@ def extract_ibcbr(anos: int = 1) -> None:
       data=response.json(), dataset_name="ibcbr", filename=filename
   )
 
-
 if __name__ == "__main__":
+  
   print("Iniciando extração e upload para o R2...\n")
-  extract_selic(anos=1)
-  extract_dolar(anos=1)
-  extract_ipca(anos=1)
-  extract_ibcbr(anos=1)
-  print("\n Ingestão concluída com sucesso!")
+  extract_selic(anos=3)
+  extract_dolar(anos=3)
+  extract_ipca(anos=5)
+  extract_ibcbr(anos=5)
+  print("\n Ingestão concluída!")
 

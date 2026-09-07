@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: fct_macroeconomia_mensal
+    description: "Tabela fato consolidada com métricas mensais de Selic, Dólar, IPCA e IBC-Br."
+    columns:
+      - name: data_referencia
+        description: "Data truncada para o primeiro dia do mês de referência."
+        tests:
+          - unique
+          - not_null
+      - name: dolar_medio
+        description: "Média mensal da cotação do dólar comercial."
+
+  - name: fct_cambio_diario
+    description: "Tabela de cotação diária do dólar com médias móveis e flags de estresse cambial."
+    columns:
+      - name: data_cotacao
+        description: "Data do fechamento da cotação."
+        tests:
+          - unique
+          - not_null
+      - name: cotacao_dolar
+        description: "Valor de fechamento do dólar no dia."
+        tests:
+          - not_null
