@@ -96,3 +96,29 @@ Pipeline_BCB/
 ├── Dockerfile               # Imagem customizada com dependências do dbt e Python
 ├── requirements.txt         # Dependências do projeto Python
 └── README.md                # Documentação técnica da solução
+```
+
+
+## Como Executar o Projeto Localmente
+
+### 1. Pré-requisitos
+* Docker e Docker Compose instalados.
+* Conta no Cloudflare R2 e Google Cloud (BigQuery).
+
+### 2. Configuração
+Clone o repositório e crie o arquivo de variáveis de ambiente:
+
+```bash
+git clone [https://github.com/MatheussRiibeiro/Pipeline_BCB.git](https://github.com/MatheussRiibeiro/Pipeline_BCB.git)
+cd Pipeline_BCB
+cp .env.example .env
+```
+
+Preencha o arquivo `.env` com suas chaves do R2 e do BigQuery.
+
+### 3. Rodar com Docker (Airflow)
+Suba os serviços conteinerizados:
+
+```bash
+docker compose up -d
+```
