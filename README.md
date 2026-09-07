@@ -93,7 +93,7 @@ Antes da orquestração automatizada no Cloudflare R2 e BigQuery, o ciclo de vid
 
 ---
 
-## 📁 Estrutura do Projeto
+## 📁 Estrutura do Projeto.
 
 ```text
 Pipeline_BCB/
