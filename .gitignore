@@ -68,3 +68,6 @@ logs/
 
 *.parquet
 *.csv
+
+# Permite que as pastas estruturais subam vazias
+!data/**/.gitkeep

@@ -37,12 +37,12 @@ def get_bigquery_client():
 
 
 def carregar_tabela(r2_client, bq_client, dataset_nome: str):
-  # 1. Lê o Parquet da camada Silver no R2 diretamente para memória
+  
   chave_r2 = f"silver/{dataset_nome}/{dataset_nome}.parquet"
   obj = r2_client.get_object(Bucket=BUCKET_NAME, Key=chave_r2)
   df = pd.read_parquet(io.BytesIO(obj["Body"].read()))
 
-  # 2. Configura a tabela de destino no BigQuery
+ 
   tabela_destino = f"{GCP_PROJECT_ID}.{GCP_DATASET_SILVER}.stg_{dataset_nome}"
 
   job_config = bigquery.LoadJobConfig(
