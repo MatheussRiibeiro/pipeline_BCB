@@ -1,6 +1,4 @@
-# ==============================================
-# SEGURANÇA E CREDENCIAIS (CRÍTICO - NÃO SUBIR)
-# ==============================================
+# SEGURANÇA E CREDENCIAIS 
 .env
 .env.*
 !.env.example
@@ -11,18 +9,15 @@ credentials/
 venv/
 ENV/
 
-# ==============================================
 # DADOS LOCAIS (Storage Bronze / Silver local)
-# ==============================================
 data/
 data/*
 !data/.gitkeep
 *.parquet
 *.csv
 
-# ==============================================
+
 # AMBIENTE PYTHON E CACHES
-# ==============================================
 __pycache__/
 *.py[cod]
 *$py.class
@@ -34,24 +29,21 @@ env/
 *.pyc
 *.pyo
 *.pyd
-# ==============================================
+
 # ARTEFATOS DBT
-# ==============================================
 dbt_bcb/target/
 dbt_bcb/dbt_packages/
 dbt_bcb/logs/
 
-# ==============================================
+
 # AIRFLOW & DOCKER LOGS
-# ==============================================
 logs/
 airflow.cfg
 airflow.db
 *.pid
 
-# ==============================================
+
 # SISTEMA OPERACIONAL & EDITORES
-# ==============================================
 .DS_Store
 Thumbs.db
 .vscode/
